@@ -5,9 +5,9 @@ This week you will be creating a Meteor app without a tutorial. We will leave th
 ## Requirements
 
 You must include:
- - 2 collections
- - 2 schemas
- - At least 3 different routes (Probably a home page and two other pages).
+ - 2 [collections](https://guide.meteor.com/collections.html)
+ - 2 [schemas](https://atmospherejs.com/aldeed/simple-schema)
+ - At least 3 different [routes](https://guide.meteor.com/routing.html) (Probably a home page and two other pages).
 
 ## Assignment Link
 
