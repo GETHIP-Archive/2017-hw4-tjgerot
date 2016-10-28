@@ -1,0 +1,123 @@
+<template name="homepage">
+  <h1>Welcome to Homework Keepr</h1>
+  <h3>Add a school class below:</h3>
+  <fieldset>
+    <form class="addclass">
+      <p style="display:inline;">
+        Period
+      </p>
+      <input type="number" name="period" />
+      <br />
+      <p style="display:inline;">
+        Room
+      </p>
+      <input type="number" name="room" />
+      <br />
+      <p style="display:inline;">
+        Teacher
+      </p>
+      <input type="text" name="teacher" />
+      <br />
+      <p style="display:inline;">
+        Name
+      </p>
+      <input type="text" name="title" />
+      <br />
+      <input class="addbutton" type="submit">
+    </form>
+  </fieldset>
+  <br />
+  <br />
+  <fieldset>
+    <form class="addhomework">
+      <p style="display:inline;">
+        Title
+      </p>
+      <input type="text" name="title"/>
+      <br />
+      <p style="display:inline;">
+        Class
+      </p>
+      <input type="text" name="class" />
+      <br />
+      <p style="display:inline;">
+        Time needed (min)
+      </p>
+      <input type="number" name="minutes" />
+      <br />
+      <input class="addbutton" type="submit" />
+    </form>
+  </fieldset>
+  <br />
+  <br />
+  <fieldset>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Period
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Teacher
+          </th>
+          <th>
+            Room
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each classes}}
+          <tr>
+            <td>
+              {{period}}
+            </td>
+            <td>
+              {{name}}
+            </td>
+            <td>
+              {{teacher}}
+            </td>
+            <td>
+              {{room}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </fieldset>
+  <fieldset>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Title
+          </th>
+          <td>
+            Class
+          </td>
+          <td>
+            Time Needed (min)
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each homeworks}}
+          <tr>
+            <td>
+              {{title}}
+            </td>
+            <td>
+              {{classname}}
+            </td>
+            <td>
+              {{minutes}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </fieldset>
+</template>
